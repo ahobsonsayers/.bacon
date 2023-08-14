@@ -1,6 +1,5 @@
 alias ll='ls -alF'
 alias la='ls -A'
-alias l='ls -CF'
 
 alias files='cd ~/storage/shared'
 alias docs='cd ~/storage/shared/Documents'
