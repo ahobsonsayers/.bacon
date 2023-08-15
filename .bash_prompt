@@ -1,0 +1,46 @@
+#!/usr/bin/env bash
+
+# Modify Prompt
+# https://wiki.archlinux.org/title/Bash/Prompt_customization
+# PS0: Displayed after each command, before any output
+# PS1: Displayed before each command
+# PS2: Displayed when a command needs more input (e.g. a multi-line command).
+
+# Colours
+# More styles here: https://gist.github.com/vratiu/9780109
+reset="\[\033[0m\]"
+black="\[\033[0;30m\]"
+red="\[\033[0;31m\]"
+green="\[\033[0;32m\]"
+yellow="\[\033[0;33m\]"
+blue="\[\033[0;34m\]"
+purple="\[\033[0;35m\]"
+cyan="\[\033[0;36m\]"
+white="\[\033[0;37m\]"
+
+# Variables
+username="\u"
+hostname="\h"
+path_full="\w"
+path_short="\W"
+time12h="\T"
+time12a="\@"
+jobs="\j"
+
+if [ -x /usr/bin/tput ] && tput setaf 1 >&/dev/null; then
+    # We have color support; assume it's compliant with Ecma-48
+    # (ISO/IEC-6429). (Lack of such support is extremely rare, and such
+    # a case would tend to support setf rather than setaf.)
+    color_prompt=yes
+else
+    color_prompt=
+fi
+
+if [ "$color_prompt" = yes ]; then
+    PS1="${red}${username}${reset} in ${green}${path_full}${reset}\n> "
+else
+    PS1="${username} in ${path_full}\n> "
+fi
+unset color_prompt
+
+export PS1

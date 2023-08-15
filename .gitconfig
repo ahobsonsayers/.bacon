@@ -1,0 +1,9 @@
+[user]
+email = ahobsonsayers@gmail.com
+name = Arran Hobson Sayers
+
+[core]
+	excludesfile = /Users/arranhs/.gitignore
+	editor = nano
+[pull]
+	rebase = false

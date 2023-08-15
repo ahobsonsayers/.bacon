@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+for completion in ~/.bash_completion.d/*; do
+    # shellcheck disable=SC1090
+    [ -f "$completion" ] &&
+        source "$completion"
+done
