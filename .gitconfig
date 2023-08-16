@@ -3,7 +3,11 @@ email = ahobsonsayers@gmail.com
 name = Arran Hobson Sayers
 
 [core]
-	excludesfile = /Users/arranhs/.gitignore
+	excludesfile = ~/.gitignore
 	editor = nano
 [pull]
 	rebase = false
+[credential "https://github.com"]
+	helper = !gh auth git-credential
+[credential "https://gist.github.com"]
+	helper = !gh auth git-credential
