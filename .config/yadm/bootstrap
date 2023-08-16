@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+for bootstrap in ~/.config/yadm/bootstrap.d/*; do
+  # shellcheck disable=SC1090
+  if [[ -x $bootstrap && ! $bootstrap =~ "##" && ! $bootstrap =~ "~$" ]]; then
+    if ! "$bootstrap"; then
+      echo "Error: bootstrap '$bootstrap' failed" >&2
+      exit 1
+    fi
+  fi
+done

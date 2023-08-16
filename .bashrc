@@ -65,7 +65,7 @@ if check_installed go; then
 fi
 
 # Completions
-if [ -r /etc/bash_completion ]; then
+if [[ -r /etc/bash_completion ]]; then
     source /etc/bash_completion
 elif [[ -r "$HOMEBREW_PREFIX/etc/profile.d/bash_completion.sh" ]]; then
     source "$HOMEBREW_PREFIX/etc/profile.d/bash_completion.sh"
