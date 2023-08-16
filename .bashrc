@@ -25,13 +25,6 @@ for function in ~/functions/*; do
     source "$function"
 done
 
-# completions
-if [[ -r /etc/bash_completion ]]; then
-  source /etc/bash_completion
-elif [[ -r "$HOMEBREW_PREFIX/etc/profile.d/bash_completion.sh" ]]; then
-  source "$HOMEBRED_PREFIX/etc/profile.d/bash_completion.sh"
-fi
-
 # homebrew
 [[ -f /opt/homebrew/bin/brew ]] &&
   eval "$(/opt/homebrew/bin/brew shellenv)"
@@ -61,4 +54,11 @@ fi
 if check_installed go; then
   go_path=$(go env GOPATH)
   export PATH="${go_path}/bin:$PATH"
+fi
+
+# completions
+if [[ -r /etc/bash_completion ]]; then
+  source /etc/bash_completion
+elif [[ -r "$HOMEBREW_PREFIX/etc/profile.d/bash_completion.sh" ]]; then
+  source "$HOMEBRED_PREFIX/etc/profile.d/bash_completion.sh"
 fi
