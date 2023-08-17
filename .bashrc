@@ -45,6 +45,10 @@ user_local_bin="$HOME/.local/bin"
 [[ -d $user_local_bin ]] &&
   PATH="$user_local_bin:$PATH"
 
+# ble.sh
+[[ -r ~/.local/share/blesh/ble.sh ]] &&
+  source ~/.local/share/blesh/ble.sh
+
 # starship
 if check_installed starship; then
   eval "$(starship init bash)"

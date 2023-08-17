@@ -8,6 +8,10 @@
 set -euo pipefail
 IFS=$'\n\t'
 
+echo ----------------------
+echo Installing asdf
+echo ----------------------
+
 ! [[ -d ~/.asdf ]] &&
   git clone https://github.com/asdf-vm/asdf.git ~/.asdf
 
