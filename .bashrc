@@ -60,5 +60,5 @@ fi
 if [[ -r /etc/bash_completion ]]; then
   source /etc/bash_completion
 elif [[ -r "$HOMEBREW_PREFIX/etc/profile.d/bash_completion.sh" ]]; then
-  source "$HOMEBRED_PREFIX/etc/profile.d/bash_completion.sh"
+  source "$HOMEBREW_PREFIX/etc/profile.d/bash_completion.sh"
 fi
