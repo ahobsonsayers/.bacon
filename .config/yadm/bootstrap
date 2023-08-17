@@ -8,5 +8,6 @@ for bootstrap in ~/.config/yadm/bootstrap.d/*; do
       echo "Error: bootstrap '$bootstrap' failed" >&2
       exit 1
     fi
+    echo
   fi
 done
