@@ -1,4 +1,4 @@
-# Bring $HOME the .bacon
+# Bringing $HOME the .bacon
 
 My set of "dotfiles" (and other files!) for $HOME
 
