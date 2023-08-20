@@ -6,3 +6,6 @@ bleopt exec_errexit_mark=
 
 # Disable elapsed-time marker like "[ble: elapsed 1.203s (CPU 0.4%)]"
 bleopt exec_elapsed_mark=
+
+# Colours
+ble-face auto_complete='fg=grey'
