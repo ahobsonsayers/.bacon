@@ -1,6 +1,8 @@
 #!/usr/bin/env bash
 # shellcheck disable=SC1090,SC1091
 
+export USER=$(id -un)
+
 function error() {
   local red="\033[31m"
   local reset="\033[0m"
