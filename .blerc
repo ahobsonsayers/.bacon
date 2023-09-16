@@ -8,4 +8,4 @@ bleopt exec_errexit_mark=
 bleopt exec_elapsed_mark=
 
 # Colours
-ble-face auto_complete='fg=grey'
+ble-face auto_complete='fg=242'
