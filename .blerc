@@ -9,3 +9,7 @@ bleopt exec_elapsed_mark=
 
 # Colours
 ble-face auto_complete='fg=242'
+
+# Required for starship to work
+# Ble.sh must be source sourced before starship
+ble-import contrib/bash-preexec
