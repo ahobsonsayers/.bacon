@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 # shellcheck disable=SC1090,SC1091
+export USER=$(id -un)
 
 function error() {
   local red="\033[31m"
@@ -26,7 +27,7 @@ for function in ~/functions/*; do
 done
 
 # homebrew
-[[ -d  /home/linuxbrew/.linuxbrew ]] &&
+[[ -d /home/linuxbrew/.linuxbrew ]] &&
   eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 [[ -d /opt/homebrew ]] &&
   eval "$(/opt/homebrew/bin/brew shellenv)"
@@ -47,7 +48,7 @@ user_local_bin="$HOME/.local/bin"
 [[ -d $user_local_bin ]] &&
   PATH="$user_local_bin:$PATH"
 
-# ble.sh (no attach)
+# ble.sh
 [[ -r ~/.local/share/blesh/ble.sh ]] &&
   [[ $BLE_ATTACHED != 1 ]] &&
   source ~/.local/share/blesh/ble.sh
@@ -69,3 +70,7 @@ if [[ -r /etc/bash_completion ]]; then
 elif [[ -r "$HOMEBREW_PREFIX/etc/profile.d/bash_completion.sh" ]]; then
   source "$HOMEBREW_PREFIX/etc/profile.d/bash_completion.sh"
 fi
+
+# local configuration
+[[ -r ~/.bash_local ]] &&
+  source ~/.bash_local
