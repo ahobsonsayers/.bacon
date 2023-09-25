@@ -68,3 +68,7 @@ if [[ -r /etc/bash_completion ]]; then
 elif [[ -r "$HOMEBREW_PREFIX/etc/profile.d/bash_completion.sh" ]]; then
   source "$HOMEBREW_PREFIX/etc/profile.d/bash_completion.sh"
 fi
+
+# local configuration
+[[ -r ~/.bash_local ]] &&
+  source ~/.bash_local

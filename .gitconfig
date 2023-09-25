@@ -9,6 +9,10 @@ editor = nano
 [pull]
 rebase = false
 
+[safe]
+# Android
+directory = /storage/emulated/0/Documents/ArranScripts
+
 [credential "https://github.com"]
 helper = !gh auth git-credential
 
