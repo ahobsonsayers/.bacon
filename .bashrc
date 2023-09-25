@@ -26,7 +26,9 @@ for function in ~/functions/*; do
 done
 
 # homebrew
-[[ -f /opt/homebrew/bin/brew ]] &&
+[[ -d  /home/linuxbrew/.linuxbrew ]] &&
+  eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+[[ -d /opt/homebrew ]] &&
   eval "$(/opt/homebrew/bin/brew shellenv)"
 
 # asdf
