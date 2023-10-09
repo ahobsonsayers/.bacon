@@ -64,6 +64,13 @@ if check_installed go; then
   export PATH="${go_path}/bin:$PATH"
 fi
 
+# perl
+if [[ -d ~/perl5 ]]; then
+  export PATH="$HOME/perl5/bin:$PATH"
+  export PERL5LIB="$HOME/perl5/lib/perl5:$PERL5LIB"
+  export PERL_LOCAL_LIB_ROOT="$HOME/perl5:$PERL_LOCAL_LIB_ROOT"
+fi
+
 # completions
 if [[ -r /etc/bash_completion ]]; then
   source /etc/bash_completion
