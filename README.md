@@ -2,8 +2,24 @@
 
 My set of "dotfiles" (and other files!) for $HOME
 
-Uses yadm. [See installation instructions](https://yadm.io/docs/install)
-
----
-
 Please, make yourself at $HOME!
+
+## Installation
+
+1. [Install yadm](https://yadm.io/docs/install)
+
+   ```bash
+   sudo apt install yadm
+   ```
+
+   or
+
+   ```bash
+   brew install yadm
+   ```
+
+2. Clone repo with yadm
+
+   ```bash
+   yadm clone https://github.com/ahobsonsayers/.bacon 
+   ```
