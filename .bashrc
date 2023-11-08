@@ -20,11 +20,9 @@ function check_installed() {
 [[ -r ~/.bash_aliases ]] &&
   source ~/.bash_aliases
 
-# functions
-for function in ~/functions/*; do
-  [ -f "$function" ] &&
-    source "$function"
-done
+# Scripts
+[[ -r ~/scripts/scripts.sh ]] && 
+  source ~/scripts/scripts.sh
 
 # homebrew
 [[ -d /home/linuxbrew/.linuxbrew ]] &&

@@ -12,7 +12,7 @@ echo ----------------------
 echo Installing asdf
 echo ----------------------
 
-! [[ -d ~/.asdf ]] &&
+! [[ -x ~/.asdf/bin/asdf ]] &&
   git clone https://github.com/asdf-vm/asdf.git ~/.asdf
 
 ~/.asdf/bin/asdf update
