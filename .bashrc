@@ -2,6 +2,9 @@
 # shellcheck disable=SC1090,SC1091
 export USER=$(id -un)
 
+# configure bash behavior
+shopt -s expand_aliases
+
 function error() {
   local red="\033[31m"
   local reset="\033[0m"
