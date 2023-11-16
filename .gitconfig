@@ -9,12 +9,12 @@ editor = nano
 [pull]
 rebase = false
 
-[safe]
-# Android
-directory = /storage/emulated/0/Documents/ArranScripts
+[include]
+path = .gitconfig.local
 
 [credential "https://github.com"]
 helper = !gh auth git-credential
 
 [credential "https://gist.github.com"]
 helper = !gh auth git-credential
+

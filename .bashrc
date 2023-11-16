@@ -23,11 +23,9 @@ function check_installed() {
 [[ -r ~/.bash_aliases ]] &&
   source ~/.bash_aliases
 
-# functions
-for function in ~/functions/*; do
-  [ -f "$function" ] &&
-    source "$function"
-done
+# Scripts
+[[ -r ~/scripts/scripts.sh ]] && 
+  source ~/scripts/scripts.sh
 
 # homebrew
 [[ -d /home/linuxbrew/.linuxbrew ]] &&
@@ -65,6 +63,13 @@ fi
 if check_installed go; then
   go_path=$(go env GOPATH)
   export PATH="${go_path}/bin:$PATH"
+fi
+
+# perl
+if [[ -d ~/perl5 ]]; then
+  export PATH="$HOME/perl5/bin:$PATH"
+  export PERL5LIB="$HOME/perl5/lib/perl5:$PERL5LIB"
+  export PERL_LOCAL_LIB_ROOT="$HOME/perl5:$PERL_LOCAL_LIB_ROOT"
 fi
 
 # completions
