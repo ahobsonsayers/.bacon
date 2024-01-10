@@ -27,3 +27,6 @@ Temporary Items
 
 # asdf
 .tool-versions
+
+# python
+.venv
