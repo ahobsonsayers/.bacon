@@ -4,7 +4,7 @@ name = Arran Hobson Sayers
 
 [core]
 excludesfile = ~/.gitignore
-editor = nano
+editor = micro
 
 [pull]
 rebase = false
