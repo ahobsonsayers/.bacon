@@ -1,6 +1,6 @@
 # Bringing $HOME the .bacon
 
-My set of "dotfiles" (and other files!) for $HOME
+My set of "dotfiles" (and other config files!) for $HOME
 
 Please, make yourself at $HOME!
 
