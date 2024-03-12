@@ -1,7 +1,13 @@
 #!/usr/bin/env bash
 
 for completion in ~/.bash_completion.d/*; do
-    # shellcheck disable=SC1090
-    [ -f "$completion" ] &&
-        source "$completion"
+  # shellcheck disable=SC1090
+  [ -f "$completion" ] &&
+    source "$completion"
+done
+
+for completion in "$HOMEBREW_PREFIX/etc/bash_completion.d"/*; do
+  # shellcheck disable=SC1090
+  [ -f "$completion" ] &&
+    source "$completion"
 done
